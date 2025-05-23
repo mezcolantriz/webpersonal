@@ -1,6 +1,6 @@
 # WebPersonal
 
-Proyecto de portafolio personal desarrollado con Django.
+Proyecto de portafolio personal desarrollado con Django con ayuda del curso IBM SKILLS Python Avanzado con Django 
 
 ## Descripción
 Este proyecto es una página web personal para mostrar información sobre Beatriz Solana, incluyendo una portada, sección de "Acerca de", portafolio de proyectos y formulario de contacto. Utiliza Django como framework principal y Bootstrap para el diseño responsivo.
