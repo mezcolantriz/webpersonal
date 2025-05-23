@@ -1,0 +1,79 @@
+{% extends "core/base.html" %}
+
+{% block title %}Portafolio{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/once_bg.png' %}{% endblock%}
+
+{% block headers %}
+<h1>Portafolio</h1>
+<span class="subheading">Curriculum Vitae</span>
+{% endblock %}
+
+
+{% block content %}
+{% load static %}
+  {% for project in projects %}
+    <!-- Proyecto  -->
+    <div class="row project">  	
+     <div class="col-lg-3 col-md-4 offset-lg-1">
+       <img class="img-fluid rounded-circle" src="{{project.image.url}}" alt="">
+      </div>
+      <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{project.title}}</h2>   
+        <p>{{project.description}}</p>
+        {% if project.link %}
+          <p><a href="{{project.link}}" target="_blank">Ver proyecto en GitHub</a></p> 
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
+
+
+{% comment %} <div class="row project">  	
+     <div class="col-lg-3 col-md-4 offset-lg-1">
+       <img class="img-fluid rounded-circle" src="{{project.image}}" alt="MoodTune - Recomendador musical">
+      </div>
+      <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{project.title}}</h2>   
+        <p>Recomendador musical con NLP y audio features. Este proyecto conlleva una intensa búsqueda, organización y limpieza de datos, consultas a APIs de Spotify y Genius, web scraping, uso de FAISS y RoBERTa, además de algoritmos de recomendación para parámetros musicales.{{project.description}}</p>
+        <p><a href="https://github.com/mezcolantriz/MoodTune" target="_blank">Ver proyecto en GitHub</a></p>
+      </div>
+    </div>
+
+    <!-- Proyecto 2: Calculadora de tiempos de transporte -->
+    <div class="row project">  	
+      <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{% static 'core/img/transfers_bg.png' %}" alt="Calculadora Transporte">
+      </div>
+      <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">Calculadora de Tiempos de Transporte</h2>   
+        <p>Herramienta para agencias de viajes y receptivos de golf. Calcula automáticamente los horarios de salida teniendo en cuenta tee times, tráfico estimado y número de pasajeros. Incluye autocompletado, plantillas por email y control de espera.</p>
+        <p><a href="https://github.com/mezcolantriz/transfers_golf_backend" target="_blank">Ver proyecto en GitHub</a></p>
+      </div>
+    </div>
+
+    <!-- Proyecto 3: Volver a mí -->
+    <div class="row project">  	
+      <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{% static 'core/img/backtome_bg.png' %}" alt="Volver a mí app emocional">
+      </div>
+      <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">Volver a mí</h2>   
+        <p>App web express creada en Streamlit para momentos de crisis emocionales. Ayuda a gestionar impulsos como escribir a alguien o sentir ansiedad. Ofrece ejercicios como "carta que no se envía", "modo avión emocional" o "hablar con tu yo del futuro", promoviendo autocuidado y claridad emocional.</p>
+        <p><a href="https://volver-a-mi-mezco.streamlit.app" target="_blank">Ver app</a></p>
+      </div>
+    </div>
+
+    <!-- Proyecto 4: Proyectos express del bootcamp -->
+    <div class="row project">  	
+      <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{% static 'core/img/proyecto_pg.png' %}" alt="Proyectos Bootcamp">
+      </div>
+      <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">Proyectos Express del Bootcamp</h2>   
+        <p>Mini proyectos realizados durante el bootcamp de Data Science. Incluyen análisis de ventas, visualización de datos con Python, regresión lineal, clasificación con k-NN y Random Forest, métricas de evaluación y optimización de hiperparámetros. Todos pensados para practicar conceptos clave de forma ágil.</p>
+        <p><a href="https://github.com/mezcolantriz" target="_blank">Ver repositorios en GitHub</a></p>
+      </div>
+    </div>
+ {% endcomment %}

@@ -1,0 +1,34 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de base de datos
+db.sqlite3
+
+# Archivos de configuración locales y variables de entorno
+*.env
+.env.*
+
+# Archivos de migraciones compilados
+**/migrations/*.pyc
+
+# Archivos de usuario de VSCode
+.vscode/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de media (opcional, si no quieres subir imágenes subidas por usuarios)
+media/
+
+# Archivos de logs
+*.log

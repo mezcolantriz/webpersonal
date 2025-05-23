@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Acerca de{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/about-bg.png' %}{% endblock%}
+
+{% block headers %}
+<h1>Acerca de</h1>
+<span class="subheading">Biografia</span>
+{% endblock %}
+
+
+{% block content %}
+<div class="col-lg-3 col-md-4 offset-lg-1">
+    <img class="img-fluid avatar" src="{% static 'core/img/avatar.png' %}" alt="">
+
+</div>
+<div class="col-lg-7 col-md-8">
+    <h2 class="section-heading">Beatriz Solana</h2>   
+    <p>Nacida en la Región de Murcia, murcianica de pura cepa, creativa y curiosa como yo sola.</p>
+    <p>Empezó trabajando en el turismo y el golf y de repente se dió cuenta de que lo que le gustaba era esto de los datos y la programación</p>
+</div>
+{% endblock %}
